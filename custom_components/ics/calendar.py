@@ -117,7 +117,8 @@ class ICSCalendarData:
     def _downloadAndParseCalendar(self):
         calendar = None
         try:
-            calendar = Calendar(urlopen(self.url).read().decode().replace('\0', ''))
+            calendar = Calendar(creator="icloud")
+            calendar.parse_multiple(urlopen(self.url).read().decode().replace('\0', ''))
         except HTTPError as http_error:
             _LOGGER.error("%s: Failed to open url: %s",
                           self.name, http_error.reason)
