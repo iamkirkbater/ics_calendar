@@ -1,2 +1,2 @@
-ics
+git+https://github.com/C4ptainCrunch/ics.py.git@master#egg=ics
 arrow
