@@ -6,7 +6,7 @@ from urllib.error import ContentTooShortError, HTTPError, URLError
 from urllib.request import urlopen
 
 import arrow
-from ics import Calendar
+from ics.ics import Calendar
 import voluptuous as vol
 from homeassistant.components.calendar import (ENTITY_ID_FORMAT,
                                                PLATFORM_SCHEMA,
